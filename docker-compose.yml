@@ -1,0 +1,31 @@
+# This file is currently used for development purpopses
+version: '2.0'
+
+services:
+
+  redis:
+    image: redis:3.2-alpine
+    ports:
+      - "6379:6379"
+
+  database:
+    image: postgres:9.5.5-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata/:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=golos
+      - POSTGRES_PASSWORD=golos
+      - POSTGRES_DB=golosdata
+
+  ipfs_daemon:
+    image: jbenet/go-ipfs:latest
+    container_name: ipfs_golos
+    volumes:
+      - ./ipfs_files/local_export:/export
+      - ./ipfs_files/ipfs_data:/data/ipfs
+    ports:
+      - "4001:4001"
+      - "5001:5001"
+      - "8080:8080"
