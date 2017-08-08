@@ -1,12 +1,6 @@
 # exclude idea files
 /.idea
 
-# Directory with static files
-staticfiles/
-uploads/
-staticfiles/*
-uploads/*
-
 # Vim plugins
 .ropeproject/
 
@@ -15,17 +9,32 @@ uploads/*
 
 __pycache__/
 
-/steemstagram/settings.py
-private.key
-logs
-conf
-logs/*
-conf/*
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-temp*.py
+# PyInstaller
+*.manifest
+*.spec
 
-# Vagrant service directory
-.vagrant
-ipfs_files
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-dump.rdb
+# virtualenv
+venv/
+ENV/
