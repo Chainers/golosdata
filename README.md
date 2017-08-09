@@ -1,12 +1,13 @@
 # Golos Data
 
 ## Features golosdata
-1 The default is noda golos
-2 Automatic create database in mongodb GolosDataNew
+
+* The default is noda golos
+* Automatic create database in mongodb GolosDataNew
 
 # Manually setup dev environment (Linux) #
 
-### Installation guide for Ubuntu 16.04 and macOS Sierra (10.12)
+### Installation guide for Ubuntu 16.04
 
 ##### 1. Installation package dependencies
 
