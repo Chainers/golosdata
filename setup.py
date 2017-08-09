@@ -1,11 +1,10 @@
 import os
 import sys
 from codecs import open
-from os import path
 
 from setuptools import setup, find_packages
 
-here = path.abspath(path.dirname(__file__))
+here = os.path.abspath(os.path.dirname(__file__))
 
 assert sys.version_info[0] == 3, "golosdata requires Python > 3"
 
