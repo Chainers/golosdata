@@ -8,12 +8,10 @@ from statistics import mean
 import requests
 from funcy.flow import silent
 
-# TODO: NOT WORKING. Need to use forked golos-python lib
-# import steem as stm
-# from steem.amount import Amount
+from golos import Steem
+from golos.amount import Amount
 
 
-# TODO: Need to modify functionality for Golos for needs of steepshot
 class Tickers(object):
     @staticmethod
     def btc_usd_ticker(verbose=False):
@@ -119,7 +117,7 @@ class Tickers(object):
 class Markets(Tickers):
     def __init__(self, cache_timeout=60, steem_instance=None):
         if not steem_instance:
-            steem_instance = stm.Steem()
+            steem_instance = Steem()
         self.steem = steem_instance
 
         self._cache_timeout = cache_timeout

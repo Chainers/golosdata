@@ -29,7 +29,7 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     install_requires=[
-        # 'steem',  # steem lib for golos
+        'steep-golos',
         'pymongo',
         'requests',
         'funcy',

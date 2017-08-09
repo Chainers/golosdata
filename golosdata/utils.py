@@ -5,9 +5,8 @@ from typing import Union
 from toolz import update_in
 from funcy.colls import walk_values
 
-# TODO: NOT WORKING. Need to use forked golos-python lib
-# from steem.amount import Amount
-# from steem.utils import keep_in_dict, parse_time
+from golos.amount import Amount
+from golos.utils import keep_in_dict, parse_time
 
 
 def typify(value: Union[dict, list, set, str]):
