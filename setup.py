@@ -21,26 +21,27 @@ setup(
     url='https://github.com/pmartynov/golosdata',
     author='@steepshot',
     author_email='steepshot.org@gmail.com',
-    license='MIT',
+    license=open('LICENSE.txt').read(),
     classifiers=[
-        'Development Status :: 1 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.5',
     ],
     keywords='golos golosio',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    data_files=[('license', ['LICENSE.txt'])],
 
     install_requires=[
         'steep-golos',
         'pymongo',
+        'python-dateutil',
         'requests',
         'funcy',
         'werkzeug',
     ],
 
     extras_require={
-        'dev': [''],
-        'test': [''],
+        'dev': ['check-manifest'],
+        'test': ['coverage'],
     },
 )
