@@ -1,3 +1,4 @@
+import os
 import sys
 from codecs import open
 from os import path
@@ -8,13 +9,16 @@ here = path.abspath(path.dirname(__file__))
 
 assert sys.version_info[0] == 3, "golosdata requires Python > 3"
 
-VERSION = '0.0.1'
+
+def readme_file():
+    return 'README.rst' if os.path.exists('README.rst') else 'README.md'
+
 
 setup(
     name='golosdata',
-    version=VERSION,
+    version='0.0.1',
     description='Python Utilities for parsing GOLOS blockchain',
-    long_description=open('README.md').read(),
+    long_description=open(readme_file()).read(),
     url='https://github.com/pmartynov/golosdata',
     author='@steepshot',
     author_email='steepshot.org@gmail.com',
