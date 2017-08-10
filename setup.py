@@ -33,9 +33,6 @@ setup(
     ],
     keywords='golos golosio',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    packages_data={
-        '': ['LICENSE.txt'],
-    },
 
     install_requires=[
         'steep-golos',
