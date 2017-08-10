@@ -13,6 +13,10 @@ def readme_file():
     return 'README.rst' if os.path.exists('README.rst') else 'README.md'
 
 
+def license_file():
+    return 'LICENSE' if os.path.exists('LICENSE') else 'LICENSE.txt'
+
+
 setup(
     name='golosdata',
     version='0.0.1',
@@ -21,7 +25,7 @@ setup(
     url='https://github.com/pmartynov/golosdata',
     author='@steepshot',
     author_email='steepshot.org@gmail.com',
-    license=open('LICENSE.txt').read(),
+    license=open(license_file()).read(),
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -29,7 +33,9 @@ setup(
     ],
     keywords='golos golosio',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    data_files=[('license', ['LICENSE.txt'])],
+    packages_data={
+        '': ['LICENSE.txt'],
+    },
 
     install_requires=[
         'steep-golos',
