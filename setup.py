@@ -19,7 +19,7 @@ def license_file():
 
 setup(
     name='golosdata',
-    version='0.0.1',
+    version='0.0.2',
     description='Python Utilities for parsing GOLOS blockchain',
     long_description=open(readme_file()).read(),
     url='https://github.com/pmartynov/golosdata',
@@ -41,6 +41,7 @@ setup(
         'requests',
         'funcy',
         'werkzeug',
+        'toolz'
     ],
 
     extras_require={
