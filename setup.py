@@ -22,7 +22,7 @@ setup(
     version='0.0.2',
     description='Python Utilities for parsing GOLOS blockchain',
     long_description=open(readme_file()).read(),
-    url='https://github.com/pmartynov/golosdata',
+    url='https://github.com/Chainers/golosdata.git',
     author='@steepshot',
     author_email='steepshot.org@gmail.com',
     license=open(license_file()).read(),
