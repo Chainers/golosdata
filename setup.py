@@ -19,7 +19,7 @@ def license_file():
 
 setup(
     name='golosdata',
-    version='0.0.2',
+    version='0.0.3',
     description='Python Utilities for parsing GOLOS blockchain',
     long_description=open(readme_file()).read(),
     url='https://github.com/Chainers/golosdata.git',
@@ -37,8 +37,6 @@ setup(
     install_requires=[
         'steep-golos',
         'pymongo',
-        'python-dateutil',
-        'requests',
         'funcy',
         'werkzeug',
         'toolz'
@@ -48,4 +46,6 @@ setup(
         'dev': ['check-manifest'],
         'test': ['coverage'],
     },
+
+    test_suite="tests.test_golosdata",
 )
